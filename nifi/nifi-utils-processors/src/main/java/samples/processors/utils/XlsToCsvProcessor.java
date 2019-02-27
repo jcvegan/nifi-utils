@@ -34,6 +34,7 @@ public class XlsToCsvProcessor extends AbstractProcessor {
 			.displayName("Skip rows")
 			.description("Number of rows to skip before converting to csv")
 			.required(false)
+			.addValidator(StandardValidators.NON_EMPTY_VALIDATOR)
 			.defaultValue("0")
 			.build();
 	
@@ -42,6 +43,7 @@ public class XlsToCsvProcessor extends AbstractProcessor {
 			.displayName("Take rows")
 			.description("Maximun number of rows to extract from file")
 			.required(false)
+			.addValidator(StandardValidators.NON_EMPTY_VALIDATOR)
 			.defaultValue("-1")
 			.build();
 	
